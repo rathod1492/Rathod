@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="FirefoxTest(failed)">
+    <parameter name="browsername" value="Firefox"/>
+    <classes>
+      <class name="Opencart_TestClass.VerificationOfApplication">
+        <methods>
+          <include name="loginApplication"/>
+          <include name="capture"/>
+          <include name="objectOfPOMClass"/>
+          <include name="verifyText"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- Opencart_TestClass.VerificationOfApplication -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+  <test thread-count="5" name="ChromexTest(failed)">
+    <parameter name="browsername" value="Chrome"/>
+    <classes>
+      <class name="Opencart_TestClass.VerificationOfApplication">
+        <methods>
+          <include name="loginApplication"/>
+          <include name="capture"/>
+          <include name="objectOfPOMClass"/>
+          <include name="verifyText"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- Opencart_TestClass.VerificationOfApplication -->
+    </classes>
+  </test> <!-- ChromexTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
