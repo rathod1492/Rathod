@@ -38,9 +38,9 @@ public class Login_OpenCart {
 		login.click();
 	}
 	
-	public void setEmail()
+	public void setEmail(String data2)
 	{
-		email.sendKeys("anshchavan528@gmail.com");
+		email.sendKeys(data2);
 	}
 	
 	public void setPassword()

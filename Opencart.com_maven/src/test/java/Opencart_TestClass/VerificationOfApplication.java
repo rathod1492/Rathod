@@ -2,6 +2,7 @@ package Opencart_TestClass;
 
 import java.io.IOException;
 
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -24,6 +25,7 @@ public class VerificationOfApplication {
 	WebDriver driver;
 	AppHeader_Opencart a;
 	Login_OpenCart login;
+	String data;
 	@Parameters("browsername")
 	@BeforeTest
 	public void launchBrowser(String browser)
@@ -47,9 +49,10 @@ public class VerificationOfApplication {
 	}
 	
 	@BeforeMethod
-	public void loginApplication()
+	public void loginApplication() throws InvalidFormatException, IOException
 	
 	{
+		Utility.getDataFromExcelSheet(0,0);
 		
 		String url="https://demo.opencart.com/index.php?route=account";
 		driver.get(url);
@@ -57,7 +60,7 @@ public class VerificationOfApplication {
 
 		login.clickOnAccount();
 		login.clickOnLogin();
-		login.setEmail();
+		login.setEmail(data);
 		login.setPassword();
 		
 		login.clickOnLoginButton();

@@ -10,6 +10,7 @@
           <include name="capture"/>
           <include name="objectOfPOMClass"/>
           <include name="verifyText"/>
+          <include name="verifyDesktopTab"/>
           <include name="launchBrowser"/>
         </methods>
       </class> <!-- Opencart_TestClass.VerificationOfApplication -->
@@ -24,6 +25,7 @@
           <include name="capture"/>
           <include name="objectOfPOMClass"/>
           <include name="verifyText"/>
+          <include name="verifyDesktopTab"/>
           <include name="launchBrowser"/>
         </methods>
       </class> <!-- Opencart_TestClass.VerificationOfApplication -->
