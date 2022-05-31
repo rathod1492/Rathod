@@ -97,6 +97,12 @@ public class VerificationOfApplication {
 			Utility.captureScreen(driver);
 		
 	}
+	
+	
+	@AfterClass
+	public void m2()
+	{
+		System.out.println("dvdbb");
 
 	}
 	
